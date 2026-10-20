@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineBook | Movie Tickets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">Cine<span>Book</span></a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#movies">Movies</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <a href="#movies" class="nav-btn">Book Tickets</a>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <p class="tagline">YOUR NEXT MOVIE EXPERIENCE</p>
+        <h1>Big Screen.<br><span>Big Emotions.</span></h1>
+        <p>
+            Discover movies, choose your favourite seats
+            and make every movie night special.
+        </p>
+        <a href="#movies" class="primary-btn">Explore Movies →</a>
+    </div>
+</section>
+
+<section class="movies-section" id="movies">
+    <div class="section-heading">
+        <div>
+            <p class="tagline">NOW SHOWING</p>
+            <h2>Popular Movies</h2>
+        </div>
+        <input type="search" id="movieSearch"
+               placeholder="Search movies...">
+    </div>
+
+    <div class="movie-grid">
+
+        <article class="movie-card">
+            <img
+              src="https://placehold.co/400x550/20243b/ffffff?text=INTERSTELLAR"
+              alt="Interstellar movie poster">
+            <div class="movie-info">
+                <h3>Interstellar</h3>
+                <p>Sci-Fi • 2h 49m</p>
+                <div class="movie-bottom">
+                    <span>⭐ 8.7</span>
+                    <button onclick="bookMovie('Interstellar', 220)">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <article class="movie-card">
+            <img
+              src="https://placehold.co/400x550/402020/ffffff?text=THE+BATMAN"
+              alt="The Batman movie poster">
+            <div class="movie-info">
+                <h3>The Batman</h3>
+                <p>Action • 2h 56m</p>
+                <div class="movie-bottom">
+                    <span>⭐ 7.8</span>
+                    <button onclick="bookMovie('The Batman', 200)">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <article class="movie-card">
+            <img
+              src="https://placehold.co/400x550/183c36/ffffff?text=AVATAR"
+              alt="Avatar movie poster">
+            <div class="movie-info">
+                <h3>Avatar</h3>
+                <p>Adventure • 2h 42m</p>
+                <div class="movie-bottom">
+                    <span>⭐ 7.9</span>
+                    <button onclick="bookMovie('Avatar', 250)">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <article class="movie-card">
+            <img
+              src="https://placehold.co/400x550/422c19/ffffff?text=INCEPTION"
+              alt="Inception movie poster">
+            <div class="movie-info">
+                <h3>Inception</h3>
+                <p>Thriller • 2h 28m</p>
+                <div class="movie-bottom">
+                    <span>⭐ 8.8</span>
+                    <button onclick="bookMovie('Inception', 180)">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <p class="tagline">SIMPLE • FAST • CONVENIENT</p>
+    <h2>Your Movie Night Starts Here</h2>
+    <p>
+        Explore movies, select a show and plan your next
+        cinema experience with CineBook.
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 CineBook | BCA DBMS Mini Project</p>
+    <p>Academic demo website — no real tickets are issued.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
