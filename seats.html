@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Seats | CineBook</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .seat-container {
+            max-width: 600px;
+            margin: 35px auto;
+            padding: 20px;
+            background: #171820;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .screen {
+            margin: 25px auto 35px;
+            padding: 10px;
+            max-width: 380px;
+            color: #17120a;
+            background: #ffbd59;
+            border-radius: 50% 50% 8px 8px;
+            box-shadow: 0 5px 25px #ffbd5933;
+        }
+        .seat-row {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 10px 0;
+        }
+        .seat {
+            width: 38px;
+            height: 34px;
+            border: none;
+            border-radius: 7px 7px 3px 3px;
+            background: #414451;
+            color: white;
+            cursor: pointer;
+        }
+        .seat.selected { background: #31bd83; color: #081b12; }
+        .seat.booked { background: #d9535d; cursor: not-allowed; }
+        .seat-legend {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+            font-size: 13px;
+        }
+        .seat-legend span { display: flex; align-items: center; gap: 5px; }
+        .seat-box {
+            width: 15px; height: 15px;
+            display: inline-block; border-radius: 3px;
+        }
+        .continue-btn {
+            width: 100%; padding: 13px; margin-top: 20px;
+            background: #ffbd59; border: 0; border-radius: 7px;
+            font-weight: bold; cursor: pointer;
+        }
+        @media(max-width:400px) {
+            .seat-row { gap: 5px; }
+            .seat { width: 30px; height: 30px; font-size: 11px; }
+        }
+    </style>
+</head>
+<body>
+<header class="navbar">
+    <a href="index.html" class="logo">Cine<span>Book</span></a>
+    <a href="booking.html">← Back</a>
+</header>
+
+<main class="seat-container">
+    <p class="tagline">STEP 2 — SELECT YOUR SEATS</p>
+    <h1>Choose Your Seats</h1>
+    <p id="movieInfo"></p>
+
+    <div class="screen">SCREEN THIS WAY</div>
+
+    <div id="seatMap"></div>
+
+    <div class="seat-legend">
+        <span><i class="seat-box" style="background:#414451"></i> Available</span>
+        <span><i class="seat-box" style="background:#31bd83"></i> Selected</span>
+        <span><i class="seat-box" style="background:#d9535d"></i> Unavailable (demo)</span>
+    </div>
+
+    <h3>Selected Seats: <span id="selectedSeats">None</span></h3>
+    <h2 style="margin-top:10px">Total: <span id="total">₹0</span></h2>
+
+    <button id="continueBtn" class="continue-btn">
+        Confirm Selection →
+    </button>
+</main>
+
+<script>
+const booking = JSON.parse(
+    sessionStorage.getItem("cinebookBooking") || "null"
+);
+
+if (!booking) {
+    alert("Please select your movie and show first.");
+    window.location.href = "index.html";
+}
+
+const seatMap = document.getElementById("seatMap");
+const selected = new Set();
+
+document.getElementById("movieInfo").textContent =
+    booking.movie + " | " + booking.date + " | " + booking.time;
+
+const rows = ["A", "B", "C", "D", "E"];
+const seatsPerRow = 8;
+
+// Demo-only unavailable seats. These are not live bookings.
+const unavailable = ["A3", "B6", "C2", "D7"];
+
+rows.forEach(function(row) {
+    const rowDiv = document.createElement("div");
+    rowDiv.className = "seat-row";
+
+    for (let n = 1; n <= seatsPerRow; n++) {
+        const seatName = row + n;
+        const button = document.createElement("button");
+        button.className = "seat";
+        button.textContent = n;
+        button.type = "button";
+        button.title = seatName;
+
+        if (unavailable.includes(seatName)) {
+            button.classList.add("booked");
+            button.disabled = true;
+        }
+
+        button.addEventListener("click", function() {
+            if (selected.has(seatName)) {
+                selected.delete(seatName);
+                button.classList.remove("selected");
+            } else {
+                if (selected.size >= booking.quantity) {
+                    alert("You selected the maximum number of tickets.");
+                    return;
+                }
+                selected.add(seatName);
+                button.classList.add("selected");
+            }
+            updateSummary();
+        });
+
+        rowDiv.appendChild(button);
+    }
+    seatMap.appendChild(rowDiv);
+});
+
+function updateSummary() {
+    document.getElementById("selectedSeats").textContent =
+        [...selected].sort().join(", ") || "None";
+
+    document.getElementById("total").textContent =
+        "₹" + (selected.size * booking.price);
+}
+
+document.getElementById("continueBtn").addEventListener("click", function() {
+    if (selected.size !== booking.quantity) {
+        alert("Please select exactly " + booking.quantity + " seat(s).");
+        return;
+    }
+
+    booking.seats = [...selected].sort();
+    booking.total = booking.seats.length * booking.price;
+
+    sessionStorage.setItem("cinebookBooking", JSON.stringify(booking));
+    window.location.href = "confirmation.html";
+});
+</script>
+</body>
+</html>
