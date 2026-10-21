@@ -1,561 +1,166 @@
 <!DOCTYPE html><html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CineBook | Book Movie Tickets</title><style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background: #090b14;
-    color: #ffffff;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 7%;
-    background: #101321;
-    border-bottom: 1px solid #25283b;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: #ff375f;
-}
-
-.logo span {
-    color: white;
-}
-
-nav {
-    display: flex;
-    gap: 22px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-nav a {
-    color: #dedfea;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-nav a:hover {
-    color: #ff375f;
-}
-
-.nav-btn {
-    background: #ff375f;
-    padding: 11px 18px;
-    border-radius: 8px;
-    color: white;
-}
-
-.hero {
-    min-height: 480px;
-    padding: 75px 7%;
-    display: flex;
-    align-items: center;
-    background:
-    linear-gradient(90deg, #090b14 8%, rgba(9,11,20,.91) 42%, rgba(9,11,20,.25)),
-    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1800&q=85");
-    background-position: center;
-    background-size: cover;
-}
-
-.hero-content {
-    max-width: 620px;
-}
-
-.tag {
-    display: inline-block;
-    color: #ff7790;
-    background: #281321;
-    border: 1px solid #633044;
-    padding: 9px 14px;
-    border-radius: 30px;
-    font-size: 12px;
-    letter-spacing: 1px;
-    margin-bottom: 22px;
-}
-
-.hero h1 {
-    font-size: clamp(38px, 6vw, 65px);
-    line-height: 1.12;
-    margin-bottom: 20px;
-}
-
-.hero h1 span {
-    color: #ff375f;
-}
-
-.hero p {
-    color: #c3c6d5;
-    line-height: 1.8;
-    font-size: 16px;
-    margin-bottom: 28px;
-}
-
-.primary-btn, .secondary-btn {
-    display: inline-block;
-    padding: 14px 22px;
-    border-radius: 9px;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 5px 8px 5px 0;
-    transition: .25s;
-}
-
-.primary-btn {
-    background: #ff375f;
-    color: white;
-}
-
-.secondary-btn {
-    border: 1px solid #656a80;
-    color: white;
-}
-
-.primary-btn:hover {
-    background: #e51e49;
-    transform: translateY(-3px);
-}
-
-.secondary-btn:hover {
-    background: #24283a;
-}
-
-.stats {
-    display: flex;
-    gap: 35px;
-    margin-top: 35px;
-    flex-wrap: wrap;
-}
-
-.stat strong {
-    display: block;
-    font-size: 22px;
-    color: white;
-    margin-bottom: 5px;
-}
-
-.stat small {
-    color: #a6aabd;
-}
-
-.section {
-    padding: 60px 7%;
-}
-
-.section-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
-}
-
-.section-heading h2 {
-    font-size: 29px;
-}
-
-.section-heading p {
-    color: #a6aabd;
-    margin-top: 8px;
-    font-size: 14px;
-}
-
-.search-box {
-    width: 100%;
-    max-width: 340px;
-    padding: 14px 16px;
-    border: 1px solid #33374b;
-    background: #141827;
-    color: white;
-    border-radius: 10px;
-    outline: none;
-    font-size: 14px;
-}
-
-.search-box:focus {
-    border-color: #ff375f;
-}
-
-.movie-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 22px;
-}
-
-.movie-card {
-    background: #141827;
-    border: 1px solid #262a3e;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: .3s;
-}
-
-.movie-card:hover {
-    transform: translateY(-7px);
-    border-color: #ff375f;
-    box-shadow: 0 12px 30px #0005;
-}
-
-.poster {
-    width: 100%;
-    height: 265px;
-    object-fit: cover;
-    display: block;
-    background: #202437;
-}
-
-.movie-info {
-    padding: 17px;
-}
-
-.movie-info h3 {
-    font-size: 18px;
-    margin-bottom: 9px;
-}
-
-.movie-meta {
-    color: #aeb2c5;
-    font-size: 12px;
-    margin-bottom: 13px;
-}
-
-.rating {
-    color: #ffc857;
-    font-size: 13px;
-    margin-bottom: 15px;
-}
-
-.movie-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-}
-
-.price {
-    color: #ff7790;
-    font-weight: bold;
-}
-
-.book-btn {
-    border: none;
-    background: #ff375f;
-    color: white;
-    padding: 10px 12px;
-    border-radius: 7px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.book-btn:hover {
-    background: #e51e49;
-}
-
-.features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.feature {
-    background: #141827;
-    border: 1px solid #262a3e;
-    border-radius: 13px;
-    padding: 25px;
-}
-
-.feature .icon {
-    font-size: 30px;
-    margin-bottom: 15px;
-}
-
-.feature h3 {
-    margin-bottom: 10px;
-}
-
-.feature p {
-    color: #aeb2c5;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-.cta {
-    margin: 0 7% 60px;
-    padding: 38px;
-    text-align: center;
-    border-radius: 18px;
-    background: linear-gradient(120deg, #45152b, #1c2036);
-    border: 1px solid #5b2941;
-}
-
-.cta h2 {
-    font-size: 28px;
-    margin-bottom: 12px;
-}
-
-.cta p {
-    color: #d0d2df;
-    margin-bottom: 22px;
-    line-height: 1.6;
-}
-
-footer {
-    padding: 25px 7%;
-    background: #101321;
-    color: #aeb2c5;
-    text-align: center;
-    font-size: 13px;
-    line-height: 1.8;
-}
-
-footer strong {
-    color: #ff375f;
-}
-
-@media (max-width: 950px) {
-    .movie-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .poster {
-        height: 300px;
-    }
-
-    .features {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 520px) {
-    header {
-        padding: 17px 5%;
-    }
-
-    nav {
-        gap: 13px;
-    }
-
-    .hero {
-        padding: 55px 5%;
-        min-height: 440px;
-    }
-
-    .section {
-        padding: 42px 5%;
-    }
-
-    .movie-grid {
-        gap: 12px;
-    }
-
-    .poster {
-        height: 190px;
-    }
-
-    .movie-info {
-        padding: 12px;
-    }
-
-    .movie-info h3 {
-        font-size: 15px;
-    }
-
-    .movie-bottom {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .book-btn {
-        width: 100%;
-    }
-
-    .stats {
-        gap: 22px;
-    }
-
-    .cta {
-        margin: 0 5% 40px;
-        padding: 25px 18px;
-    }
-}
-</style></head><body><header>
-    <div class="logo">Cine<span>Book.</span></div><nav>
-    <a href="index.html">Home</a>
-    <a href="#movies">Movies</a>
-    <a href="#features">Why CineBook?</a>
-    <a href="#about">About</a>
-    <a href="#movies" class="nav-btn">Book Tickets</a>
-</nav>
-
-</header><section class="hero">
-    <div class="hero-content">
-        <div class="tag">YOUR MOVIE NIGHT STARTS HERE</div>    <h1>Big Screen.<br><span>Big Emotions.</span></h1>
-
-    <p>
-        Discover your next favourite movie, choose your seats,
-        and make every movie night unforgettable with CineBook.
-    </p>
-
-    <a href="#movies" class="primary-btn">Explore Movies →</a>
-    <a href="#features" class="secondary-btn">Discover More</a>
-
-    <div class="stats">
-        <div class="stat">
-            <strong>4+</strong>
-            <small>Featured Movies</small>
-        </div>
-        <div class="stat">
-            <strong>Easy</strong>
-            <small>Seat Selection</small>
-        </div>
-        <div class="stat">
-            <strong>24/7</strong>
-            <small>Browse Anytime</small>
-        </div>
-    </div>
-</div>
-
-</section><section class="section" id="movies">
-    <div class="section-heading">
-        <div>
-            <h2>Now Showing 🎬</h2>
-            <p>Find a movie for your next big-screen experience.</p>
-        </div>    <input
-        type="text"
-        id="movieSearch"
-        class="search-box"
-        placeholder="🔍 Search your favourite movie..."
-        oninput="filterMovies()"
-    >
-</div>
-
-<div class="movie-grid" id="movieGrid">
-
-    <article class="movie-card" data-title="interstellar">
-        <img class="poster"
-            src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
-            alt="Interstellar movie poster">
-
-        <div class="movie-info">
-            <h3>Interstellar</h3>
-            <div class="movie-meta">Sci-Fi · Adventure</div>
-            <div class="rating">★ 8.7 / 10</div>
-            <div class="movie-bottom">
-                <span class="price">₹250 / ticket</span>
-                <button class="book-btn" onclick="bookMovie('Interstellar', 250)">Book Now</button>
-            </div>
-        </div>
-    </article>
-
-    <article class="movie-card" data-title="the batman batman">
-        <img class="poster"
-            src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg"
-            alt="The Batman movie poster">
-
-        <div class="movie-info">
-            <h3>The Batman</h3>
-            <div class="movie-meta">Action · Crime</div>
-            <div class="rating">★ 7.8 / 10</div>
-            <div class="movie-bottom">
-                <span class="price">₹220 / ticket</span>
-                <button class="book-btn" onclick="bookMovie('The Batman', 220)">Book Now</button>
-            </div>
-        </div>
-    </article>
-
-    <article class="movie-card" data-title="avatar">
-        <img class="poster"
-            src="https://image.tmdb.org/t/p/w500/kyeqWdyUXW608qlYkRqosgbbJyK.jpg"
-            alt="Avatar movie poster">
-
-        <div class="movie-info">
-            <h3>Avatar</h3>
-            <div class="movie-meta">Fantasy · Adventure</div>
-            <div class="rating">★ 7.9 / 10</div>
-            <div class="movie-bottom">
-                <span class="price">₹280 / ticket</span>
-                <button class="book-btn" onclick="bookMovie('Avatar', 280)">Book Now</button>
-            </div>
-        </div>
-    </article>
-
-    <article class="movie-card" data-title="inception">
-        <img class="poster"
-            src="https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg"
-            alt="Inception movie poster">
-
-        <div class="movie-info">
-            <h3>Inception</h3>
-            <div class="movie-meta">Sci-Fi · Thriller</div>
-            <div class="rating">★ 8.8 / 10</div>
-            <div class="movie-bottom">
-                <span class="price">₹240 / ticket</span>
-                <button class="book-btn" onclick="bookMovie('Inception', 240)">Book Now</button>
-            </div>
-        </div>
-    </article>
-
-</div>
-
-</section><section class="section" id="features">
-    <div class="section-heading">
-        <div>
-            <h2>Why Choose CineBook?</h2>
-            <p>A simple and convenient movie-booking experience.</p>
-        </div>
-    </div><div class="features">
-    <div class="feature">
-        <div class="icon">🎟️</div>
-        <h3>Easy Booking</h3>
-        <p>Choose your movie, showtime and ticket quantity in a few simple steps.</p>
-    </div>
-
-    <div class="feature">
-        <div class="icon">💺</div>
-        <h3>Choose Your Seats</h3>
-        <p>Use the interactive seat-selection page to pick seats for your group.</p>
-    </div>
-
-    <div class="feature">
-        <div class="icon">📱</div>
-        <h3>Responsive Design</h3>
-        <p>Explore the website on a mobile phone, tablet or computer.</p>
-    </div>
-</div>
-
-</section><section class="cta" id="about">
-    <h2>Ready for Movie Time? 🍿</h2>
-    <p>Choose your favourite movie and start planning your next movie night.</p>
-    <a href="#movies" class="primary-btn">Book Your Tickets →</a>
-</section><footer>
-    <strong>CineBook.</strong> — Your Movie, Your Moment.<br>
-    BCA DBMS Mini Project · Educational Demo Website<br>
-    © 2026 CineBook. All rights reserved.
-</footer><script src="script.js"></script><script>
-function filterMovies() {
-    const searchText = document.getElementById("movieSearch").value.toLowerCase();
-    const cards = document.querySelectorAll(".movie-card");
-
-    cards.forEach(function(card) {
-        const title = card.getAttribute("data-title");
-        card.style.display = title.includes(searchText) ? "" : "none";
-    });
-}
-</script></body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineBook | Movie Ticket Booking</title>
+</head><body bgcolor="#101522" text="white"><header>
+    <center>
+        <h1>🎬 CINEBOOK</h1>
+        <p><b>Your Movies. Your Seats. Your Experience.</b></p>
+
+        <nav>
+            <a href="index.html">🏠 Home</a> |
+            <a href="#movies">🎥 Movies</a> |
+            <a href="#features">⭐ Features</a> |
+            <a href="#about">ℹ️ About</a>
+        </nav>
+    </center>
+    <hr>
+</header>
+
+<main>
+    <center>
+        <h1>Big Screen. Big Emotions.</h1>
+        <h3>Book your favourite movie tickets online!</h3>
+
+        <p>Discover movies, explore ticket prices and enjoy your cinema experience.</p>
+
+        <img
+            src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1000"
+            alt="Cinema hall with movie screen"
+            width="90%"
+            height="250">
+
+        <p><a href="#movies">🎟️ Explore Movies</a></p>
+    </center>
+
+    <hr>
+
+    <section id="movies">
+        <center>
+            <h1>🎥 Now Showing</h1>
+            <p>Choose your movie and book your tickets.</p>
+        </center>
+
+        <table width="100%" cellpadding="10">
+            <tr>
+                <td align="center" valign="top" width="50%">
+                    <img
+                        src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+                        alt="Interstellar movie poster"
+                        width="180"
+                        height="260">
+                    <h2>Interstellar</h2>
+                    <p>Genre: Sci-Fi / Adventure</p>
+                    <p>⭐ Rating: 8.7/10</p>
+                    <p><b>Ticket Price: ₹250</b></p>
+                    <a href="booking.html?movie=Interstellar&price=250">🎟️ Book Now</a>
+                </td>
+
+                <td align="center" valign="top" width="50%">
+                    <img
+                        src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg"
+                        alt="The Batman movie poster"
+                        width="180"
+                        height="260">
+                    <h2>The Batman</h2>
+                    <p>Genre: Action / Crime</p>
+                    <p>⭐ Rating: 7.8/10</p>
+                    <p><b>Ticket Price: ₹200</b></p>
+                    <a href="booking.html?movie=The%20Batman&price=200">🎟️ Book Now</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center" valign="top" width="50%">
+                    <img
+                        src="https://image.tmdb.org/t/p/w500/kyeqWdyUXW608qlYkRqosgbbJyK.jpg"
+                        alt="Avatar movie poster"
+                        width="180"
+                        height="260">
+                    <h2>Avatar</h2>
+                    <p>Genre: Sci-Fi / Fantasy</p>
+                    <p>⭐ Rating: 7.9/10</p>
+                    <p><b>Ticket Price: ₹220</b></p>
+                    <a href="booking.html?movie=Avatar&price=220">🎟️ Book Now</a>
+                </td>
+
+                <td align="center" valign="top" width="50%">
+                    <img
+                        src="https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg"
+                        alt="Inception movie poster"
+                        width="180"
+                        height="260">
+                    <h2>Inception</h2>
+                    <p>Genre: Sci-Fi / Thriller</p>
+                    <p>⭐ Rating: 8.8/10</p>
+                    <p><b>Ticket Price: ₹180</b></p>
+                    <a href="booking.html?movie=Inception&price=180">🎟️ Book Now</a>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section id="features">
+        <center>
+            <h1>⭐ Why Choose CineBook?</h1>
+        </center>
+
+        <table width="100%" cellpadding="12">
+            <tr>
+                <td align="center">
+                    <h2>🎫 Easy Booking</h2>
+                    <p>Explore movies and move through a simple booking process.</p>
+                </td>
+                <td align="center">
+                    <h2>💺 Seat Selection</h2>
+                    <p>Choose your preferred seats on the seat selection page.</p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <h2>📱 Mobile Friendly</h2>
+                    <p>Open the website on your phone, tablet or computer.</p>
+                </td>
+                <td align="center">
+                    <h2>⚡ Quick Access</h2>
+                    <p>View movie details and ticket prices in one place.</p>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section id="about">
+        <center>
+            <h1>ℹ️ About CineBook</h1>
+            <p>
+                CineBook is a BCA DBMS mini project demonstrating
+                an online movie ticket booking system.
+            </p>
+            <p>
+                The project illustrates movie listings, booking,
+                seat selection and a demo confirmation process.
+            </p>
+            <p><b>Academic Project — No real payment is processed.</b></p>
+        </center>
+    </section>
+</main>
+
+<hr>
+
+<footer>
+    <center>
+        <h3>🎬 CineBook</h3>
+        <p>Book Tickets. Enjoy Movies.</p>
+        <p>BCA DBMS Mini Project | 2026</p>
+        <p>© CineBook — Educational Demo Website</p>
+        <a href="#top">Back to Top ↑</a>
+    </center>
+</footer>
+
+</body>
 </html>
