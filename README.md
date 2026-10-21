@@ -1,104 +1,261 @@
-# Movie-Ticket-Booking-
-# 🎬 CineBook – Online Movie Ticket Booking System
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineBook - Project Documentation</title>
+</head>
 
-## 📌 Project Overview
-CineBook is an Online Movie Ticket Booking System developed for the BCA 1st Semester DBMS Innovative Assignment at Silver Oak University.
+<body bgcolor="#101010" text="white" link="#ff526b" vlink="#ff526b">
 
-The website helps users explore movies, search for their favourite movies, view ticket prices, and proceed through the movie booking process.
+<header id="top">
+    <center>
+        <h1><font color="#e50914" size="7">CINEBOOK</font></h1>
+        <h2>Online Movie Ticket Booking System</h2>
+        <p>DBMS Academic Project | BCA Semester 1</p>
+        <hr color="#444444" width="90%">
+        <p>
+            <a href="#overview">Overview</a> |
+            <a href="#features">Features</a> |
+            <a href="#technology">Technologies</a> |
+            <a href="#database">Database</a> |
+            <a href="#sql">SQL Concepts</a> |
+            <a href="#setup">How to Run</a>
+        </p>
+    </center>
+</header>
 
-## 🎯 Objectives
-- Develop a user-friendly movie ticket booking website.
-- Display movie information and ticket prices.
-- Implement movie search functionality.
-- Provide booking, seat selection, and confirmation pages.
-- Understand database design and SQL implementation.
+<hr color="#444444">
 
-## 🛠️ Technologies Used
-- HTML5
-- CSS3
-- JavaScript
-- SQL (for database implementation)
+<main>
 
-## 📂 Project Structure
+<section id="overview">
+    <h2>1. Project Overview</h2>
 
-```text
-MovieBooking/
-│
-├── index.html
-├── style.css
-├── script.js
-├── booking.html
-├── seats.html
-├── confirmation.html
-└── README.md
-```
+    <p>
+        CineBook is a web-based movie ticket booking project developed
+        to demonstrate the practical use of Database Management Systems.
+    </p>
 
-## ✨ Features
-- Attractive homepage
-- Movie listing cards
-- Movie search functionality
-- Movie ticket prices
-- Book Now buttons
-- Responsive design
-- Movie booking workflow
+    <p>
+        The website allows users to explore movie information, view posters
+        and navigate through a movie booking demonstration. The project
+        also includes SQL examples for database creation and management.
+    </p>
 
-## 🚀 How to Run
-1. Download or copy the project files.
-2. Open the project folder in Acode.
-3. Ensure all files are saved in the same folder.
-4. Open `index.html`.
-5. Select Preview or open it in a browser.
-6. Explore the available website features.
+    <p>
+        <b>Project Objective:</b> To understand how database concepts
+        can be applied to a real-world movie ticket booking system.
+    </p>
 
-## 🗄️ Database Design
-The planned database may contain the following tables:
+    <p>
+        <a href="https://kartiksen6660-dev.github.io/https-kartiksen6660-dev.github.io-Movie-Ticket-Booking--/">
+            Visit Live CineBook Website
+        </a>
+    </p>
+</section>
 
-- Movies
-- Shows
-- Customers
-- Bookings
-- Seats
-- Payments
+<hr color="#444444">
 
-Primary keys and foreign keys will be used to establish relationships between tables.
+<section id="features">
+    <h2>2. Project Features</h2>
 
-## 📚 DBMS Concepts
-This project will demonstrate:
+    <ul>
+        <li>Movie homepage with movie posters</li>
+        <li>Movie categories and information</li>
+        <li>Movie booking navigation</li>
+        <li>Seat selection interface</li>
+        <li>Booking confirmation page</li>
+        <li>SQL database design and sample records</li>
+        <li>SQL queries for database operations</li>
+        <li>Database transaction examples</li>
+    </ul>
+</section>
 
-- DDL and DML
-- DCL and TCL
-- SQL Clauses and Operators
-- Joins and Nested Queries
-- SQL Functions
-- ACID Properties
-- Transaction Management
-- Serializability
-- Concurrency Control
-- Deadlocks
-- Database Recovery
+<hr color="#444444">
 
-## ⚠️ Project Limitations
-This is an academic demonstration project. Real-time seat availability, actual online payments, and permanent database storage require backend and database integration.
+<section id="technology">
+    <h2>3. Technologies Used</h2>
 
-## 🔮 Future Scope
-- User registration and login
-- SQL database connectivity
-- Real-time seat booking
-- Unique booking ID generation
-- Digital ticket generation
-- Secure payment gateway integration
+    <table border="1" cellpadding="10" cellspacing="0" width="100%">
+        <tr>
+            <th>Technology</th>
+            <th>Purpose</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Website structure and content</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Website styling, if included</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Frontend interactions, if implemented</td>
+        </tr>
+        <tr>
+            <td>SQL</td>
+            <td>Database design and queries</td>
+        </tr>
+        <tr>
+            <td>GitHub Pages</td>
+            <td>Website hosting</td>
+        </tr>
+    </table>
+</section>
 
-## 🎓 Academic Details
+<hr color="#444444">
 
-**Project:** Online Movie Ticket Booking System  
-**Programme:** BCA  
-**Semester:** 1  
-**Course:** Database Management System (DBMS)  
-**Institute:** Silver Oak University  
-**Academic Year:** 2026–27
+<section id="database">
+    <h2>4. Database Design</h2>
 
-## 👨‍💻 Author
-Developed as an individual academic mini project.
+    <p>The database can include the following entities, depending on the implemented schema:</p>
 
-## 📄 License
-This project is created for educational purposes.
+    <table border="1" cellpadding="10" cellspacing="0" width="100%">
+        <tr>
+            <th>Entity</th>
+            <th>Purpose</th>
+        </tr>
+        <tr>
+            <td>Customers</td>
+            <td>Stores customer information</td>
+        </tr>
+        <tr>
+            <td>Movies</td>
+            <td>Stores movie details</td>
+        </tr>
+        <tr>
+            <td>Bookings</td>
+            <td>Stores ticket booking records</td>
+        </tr>
+        <tr>
+            <td>Seats</td>
+            <td>Stores seat information</td>
+        </tr>
+        <tr>
+            <td>Payments</td>
+            <td>Represents payment records, if implemented</td>
+        </tr>
+    </table>
+
+    <h3>Database Relationships</h3>
+    <ul>
+        <li>A customer can make multiple bookings.</li>
+        <li>A movie can be associated with multiple bookings.</li>
+        <li>A booking can be associated with seat records.</li>
+        <li>Primary keys and foreign keys help maintain data integrity.</li>
+    </ul>
+</section>
+
+<hr color="#444444">
+
+<section id="sql">
+    <h2>5. SQL Concepts</h2>
+
+    <table border="1" cellpadding="10" cellspacing="0" width="100%">
+        <tr>
+            <th>Category</th>
+            <th>Commands / Concepts</th>
+        </tr>
+        <tr>
+            <td>DDL</td>
+            <td>CREATE, ALTER, DROP</td>
+        </tr>
+        <tr>
+            <td>DML</td>
+            <td>INSERT, UPDATE, DELETE</td>
+        </tr>
+        <tr>
+            <td>DQL</td>
+            <td>SELECT</td>
+        </tr>
+        <tr>
+            <td>DCL</td>
+            <td>GRANT, REVOKE</td>
+        </tr>
+        <tr>
+            <td>TCL</td>
+            <td>COMMIT, ROLLBACK, SAVEPOINT</td>
+        </tr>
+        <tr>
+            <td>Query Operations</td>
+            <td>WHERE, ORDER BY, GROUP BY, BETWEEN, LIKE</td>
+        </tr>
+        <tr>
+            <td>Advanced SQL</td>
+            <td>Joins, nested queries and aggregate functions</td>
+        </tr>
+        <tr>
+            <td>Transaction Concepts</td>
+            <td>ACID properties, concurrency and recovery</td>
+        </tr>
+    </table>
+</section>
+
+<hr color="#444444">
+
+<section id="setup">
+    <h2>6. How to Run the Project</h2>
+
+    <h3>Website</h3>
+    <ol>
+        <li>Open the CineBook repository on GitHub.</li>
+        <li>Open the <b>index.html</b> file.</li>
+        <li>Use the GitHub Pages link to open the website.</li>
+        <li>Navigate through the available pages and test their links.</li>
+    </ol>
+
+    <h3>SQL Files</h3>
+    <ol>
+        <li>Open a compatible online SQL compiler or database.</li>
+        <li>Run the database and table creation statements.</li>
+        <li>Insert the sample records.</li>
+        <li>Execute the SQL queries and check their results.</li>
+    </ol>
+</section>
+
+<hr color="#444444">
+
+<section>
+    <h2>7. Project Limitations</h2>
+
+    <ul>
+        <li>The GitHub Pages website is a frontend demonstration.</li>
+        <li>GitHub Pages alone does not connect the website to MySQL.</li>
+        <li>Live ticket availability and persistent bookings require
+            a backend and database integration.</li>
+        <li>Online payments are not claimed unless separately implemented.</li>
+    </ul>
+</section>
+
+<hr color="#444444">
+
+<section>
+    <h2>8. Learning Outcomes</h2>
+
+    <ul>
+        <li>Understanding relational database design</li>
+        <li>Using primary and foreign keys</li>
+        <li>Writing SQL queries</li>
+        <li>Understanding database transactions</li>
+        <li>Connecting database concepts to a real-world application</li>
+    </ul>
+</section>
+
+<hr color="#444444">
+
+<footer>
+    <center>
+        <h2><font color="#e50914">CINEBOOK</font></h2>
+        <p>Discover Movies. Choose Seats. Enjoy the Show.</p>
+        <p>BCA Semester 1 | DBMS Academic Project</p>
+        <p>Silver Oak University</p>
+        <p><a href="#top">Back to Top ↑</a></p>
+        <small>Created for educational purposes.</small>
+    </center>
+</footer>
+
+</main>
+</body>
+</html>
