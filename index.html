@@ -3,303 +3,375 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineBook | Movies Worth Watching</title>
-    <meta name="description" content="Explore movies and book tickets with CineBook.">
+    <title>CineBook | Project Documentation</title>
 </head>
 
-<body bgcolor="#101010" text="white" link="#ff4057" vlink="#ff4057">
+<body bgcolor="#101014" text="#eeeeee" link="#ff526b" vlink="#ff526b">
 
 <header id="top">
-    <table width="100%" bgcolor="#181818" cellpadding="15">
-        <tr>
-            <td>
-                <font size="6" color="#e50914"><b>CINEBOOK</b></font>
-            </td>
-            <td align="center">
-                <a href="index.html"><font color="white">Home</font></a>
-                &nbsp;&nbsp;
-                <a href="#trending"><font color="white">Trending</font></a>
-                &nbsp;&nbsp;
-                <a href="#action"><font color="white">Action</font></a>
-                &nbsp;&nbsp;
-                <a href="#scifi"><font color="white">Sci-Fi</font></a>
-                &nbsp;&nbsp;
-                <a href="#popular"><font color="white">Popular</font></a>
-            </td>
-            <td align="right">
-                <a href="booking.html"><b>Book Tickets</b></a>
-            </td>
-        </tr>
-    </table>
+    <center>
+        <h1><font color="#e50914" size="7">CINEBOOK</font></h1>
+        <h3>ONLINE MOVIE TICKET BOOKING SYSTEM</h3>
+        <p>Database Management System | BCA Semester 1</p>
+        <p><small>PROJECT DOCUMENTATION</small></p>
+    </center>
+
+    <hr color="#444444">
+
+    <nav>
+        <center>
+            <a href="#overview">OVERVIEW</a> &nbsp; | &nbsp;
+            <a href="#features">FEATURES</a> &nbsp; | &nbsp;
+            <a href="#technology">TECHNOLOGIES</a> &nbsp; | &nbsp;
+            <a href="#database">DATABASE</a> &nbsp; | &nbsp;
+            <a href="#sql">SQL CONCEPTS</a> &nbsp; | &nbsp;
+            <a href="#installation">SETUP</a> &nbsp; | &nbsp;
+            <a href="#limitations">LIMITATIONS</a>
+        </center>
+    </nav>
+
+    <hr color="#444444">
 </header>
 
 <main>
 
-<!-- FEATURED MOVIE -->
+<!-- PROJECT INTRODUCTION -->
 
-<table width="100%" bgcolor="#202020" cellpadding="28">
-    <tr>
-        <td width="60%" valign="middle">
-            <font color="#e50914" size="3"><b> CINEBOOK ORIGINAL EXPERIENCE </b></font>
-            <h1><font size="7">INTERSTELLAR</font></h1>
-            <p>
-                <font color="#cccccc">
-                    Adventure &nbsp; | &nbsp; Sci-Fi &nbsp; | &nbsp; Drama
-                </font>
-            </p>
-            <p>
-                Travel beyond the stars in a breathtaking journey
-                through space, time and humanity.
-            </p>
-            <p>
-                <a href="booking.html?movie=Interstellar">
-                    <font color="white" size="4"><b>[ BOOK TICKETS ]</b></font>
-                </a>
-                &nbsp;&nbsp;&nbsp;
-                <a href="#trending">
-                    <font color="white" size="4">[ EXPLORE MOVIES ]</font>
-                </a>
-            </p>
-        </td>
-        <td width="40%" align="center">
-            <img
-                src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
-                alt="Interstellar movie poster"
-                width="260"
-            >
-        </td>
-    </tr>
-</table>
-
-<br>
-
-<!-- TRENDING MOVIES -->
-
-<section id="trending">
-    <h2>&nbsp; Trending Now</h2>
-    <table width="100%" cellpadding="8">
-        <tr>
-            <td width="20%">
-                <a href="booking.html?movie=The-Dark-Knight">
-                    <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
-                         alt="The Dark Knight poster" width="100%">
-                </a>
-                <h3>The Dark Knight</h3>
-                <p>Action | Crime</p>
-                <a href="booking.html?movie=The-Dark-Knight">Book Now</a>
-            </td>
-            <td width="20%">
-                <a href="booking.html?movie=Inception">
-                    <img src="https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg"
-                         alt="Inception poster" width="100%">
-                </a>
-                <h3>Inception</h3>
-                <p>Sci-Fi | Thriller</p>
-                <a href="booking.html?movie=Inception">Book Now</a>
-            </td>
-            <td width="20%">
-                <a href="booking.html?movie=Avatar">
-                    <img src="https://image.tmdb.org/t/p/w500/kyeqWdyUXW608qlYkRqosgbbJyK.jpg"
-                         alt="Avatar poster" width="100%">
-                </a>
-                <h3>Avatar</h3>
-                <p>Fantasy | Adventure</p>
-                <a href="booking.html?movie=Avatar">Book Now</a>
-            </td>
-            <td width="20%">
-                <a href="booking.html?movie=Avengers-Endgame">
-                    <img src="https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg"
-                         alt="Avengers Endgame poster" width="100%">
-                </a>
-                <h3>Avengers: Endgame</h3>
-                <p>Action | Superhero</p>
-                <a href="booking.html?movie=Avengers-Endgame">Book Now</a>
-            </td>
-            <td width="20%">
-                <a href="booking.html?movie=Joker">
-                    <img src="https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"
-                         alt="Joker poster" width="100%">
-                </a>
-                <h3>Joker</h3>
-                <p>Drama | Thriller</p>
-                <a href="booking.html?movie=Joker">Book Now</a>
-            </td>
-        </tr>
-    </table>
-</section>
-
-<hr color="#333333">
-
-<!-- ACTION MOVIES -->
-
-<section id="action">
-    <h2>&nbsp; Action & Adventure</h2>
-    <table width="100%" cellpadding="8">
-        <tr>
-            <td width="20%">
-                <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
-                     alt="Spider-Man No Way Home poster" width="100%">
-                <h3>Spider-Man: No Way Home</h3>
-                <a href="booking.html?movie=Spider-Man">Book Now</a>
-            </td>
-            <td width="20%">
-                <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg"
-                     alt="Spider-Verse poster" width="100%">
-                <h3>Across the Spider-Verse</h3>
-                <a href="booking.html?movie=Spider-Verse">Book Now</a>
-            </td>
-            <td width="20%">
-                <img src="https://image.tmdb.org/t/p/w500/9O1Iy9od7q2G7gW9o5k0v1p5h8Q.jpg"
-                     alt="Action movie poster" width="100%">
-                <h3>Action Spotlight</h3>
-                <a href="booking.html?movie=Action">Book Now</a>
-            </td>
-            <td width="20%">
-                <img src="https://image.tmdb.org/t/p/w500/5KCVkau1HEl7ZzfPsKAPM0sMiKc.jpg"
-                     alt="The Batman poster" width="100%">
-                <h3>The Batman</h3>
-                <a href="booking.html?movie=The-Batman">Book Now</a>
-            </td>
-            <td width="20%">
-                <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
-                     alt="Wonder Woman 1984 poster" width="100%">
-                <h3>Wonder Woman 1984</h3>
-                <a href="booking.html?movie=Wonder-Woman">Book Now</a>
-            </td>
-        </tr>
-    </table>
-</section>
-
-<hr color="#333333">
-
-<!-- SCI-FI MOVIES -->
-
-<section id="scifi">
-    <h2>&nbsp; Sci-Fi & Fantasy</h2>
-    <table width="100%" cellpadding="8">
-        <tr>
-            <td width="20%">
-                <img src="https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg"
-                     alt="Dune poster" width="100%">
-                <h3>Dune</h3>
-                <a href="booking.html?movie=Dune">Book Now</a>
-            </td>
-            <td width="20%">
-                <img src="https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg"
-                     alt="Star Wars poster" width="100%">
-                <h3>Star Wars</h3>
-                <a href="booking.html?movie=Star-Wars">Book Now</a>
-            </td>
-            <td width="20%">
-                <img src="https://image.tmdb.org/t/p/w500/5a7lMDn3nAj2ByO0X1fg6BhUphR.jpg"
-                     alt="Jurassic World poster" width="100%">
-                <h3>Jurassic World</h3>
-                <a href="booking.html?movie=Jurassic-World">Book Now</a>
-            </td>
-            <td width="20%">
-                <img src="https://image.tmdb.org/t/p/w500/4ssDuvEDkSArWEdyBl2X5EHvYKU.jpg"
-                     alt="Guardians of the Galaxy poster" width="100%">
-                <h3>Guardians of the Galaxy</h3>
-                <a href="booking.html?movie=Guardians">Book Now</a>
-            </td>
-            <td width="20%">
-                <img src="https://image.tmdb.org/t/p/w500/2CAL2433ZeIihfX1Hb2139CX0pW.jpg"
-                     alt="The Matrix poster" width="100%">
-                <h3>The Matrix</h3>
-                <a href="booking.html?movie=The-Matrix">Book Now</a>
-            </td>
-        </tr>
-    </table>
-</section>
-
-<hr color="#333333">
-
-<!-- POPULAR MOVIES -->
-
-<section id="popular">
-    <h2>&nbsp; Popular Picks</h2>
-    <table width="100%" cellpadding="8">
-        <tr>
-            <td width="20%">
-                <img src="https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg"
-                     alt="Parasite poster" width="100%">
-                <h3>Parasite</h3>
-                <a href="booking.html?movie=Parasite">Book Now</a>
-            </td>
-            <td width="20%">
-                <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
-                     alt="Oppenheimer poster" width="100%">
-                <h3>Oppenheimer</h3>
-                <a href="booking.html?movie=Oppenheimer">Book Now</a>
-            </td>
-            <td width="20%">
-                <img src="https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg"
-                     alt="Tenet poster" width="100%">
-                <h3>Tenet</h3>
-                <a href="booking.html?movie=Tenet">Book Now</a>
-            </td>
-            <td width="20%">
-                <img src="https://image.tmdb.org/t/p/w500/8Y43POKjjKDGI9MH89NW0NAzzp8.jpg"
-                     alt="Free Guy poster" width="100%">
-                <h3>Free Guy</h3>
-                <a href="booking.html?movie=Free-Guy">Book Now</a>
-            </td>
-            <td width="20%">
-                <img src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg"
-                     alt="The Godfather poster" width="100%">
-                <h3>The Godfather</h3>
-                <a href="booking.html?movie=Godfather">Book Now</a>
-            </td>
-        </tr>
-    </table>
-</section>
-
-<hr color="#333333">
-
-<!-- HOW IT WORKS -->
-
-<section>
+<section id="overview">
     <center>
-        <h2>Your Movie Night in 3 Steps</h2>
-        <table width="90%" cellpadding="20">
-            <tr>
-                <td align="center">
-                    <h3>01. Discover</h3>
-                    <p>Explore movies and find your favourite.</p>
-                </td>
-                <td align="center">
-                    <h3>02. Select</h3>
-                    <p>Choose a movie and your preferred seats.</p>
-                </td>
-                <td align="center">
-                    <h3>03. Confirm</h3>
-                    <p>Review your booking details.</p>
-                </td>
-            </tr>
-        </table>
-        <p><a href="booking.html"><b>START YOUR BOOKING</b></a></p>
+        <p><font color="#ff526b">WELCOME TO CINEBOOK</font></p>
+        <h2>Project Overview</h2>
+        <p>Discover Movies. Choose Seats. Enjoy the Show.</p>
     </center>
+
+    <h3>About the Project</h3>
+
+    <p>
+        CineBook is a web-based movie ticket booking project created
+        to demonstrate the practical application of Database Management
+        Systems (DBMS). It provides a website interface where users can
+        explore movie posters and navigate through a movie booking process.
+    </p>
+
+    <p>
+        The academic project also covers relational database design,
+        SQL queries, data management and transaction concepts used in
+        booking-related applications.
+    </p>
+
+    <h3>Project Objectives</h3>
+
+    <ul>
+        <li>Understand the role of DBMS in a real-world application.</li>
+        <li>Organize data using relational database tables.</li>
+        <li>Practice SQL commands and database operations.</li>
+        <li>Understand primary keys, foreign keys and relationships.</li>
+        <li>Demonstrate a user-friendly movie booking workflow.</li>
+    </ul>
+
+    <center>
+        <p>
+            <a href="https://kartiksen6660-dev.github.io/https-kartiksen6660-dev.github.io-Movie-Ticket-Booking--/">
+                <b>▶ OPEN LIVE CINEBOOK WEBSITE</b>
+            </a>
+        </p>
+    </center>
+</section>
+
+<hr color="#444444">
+
+<!-- FEATURES -->
+
+<section id="features">
+    <h2>01. Key Features</h2>
+
+    <p>The project is organized around the following features:</p>
+
+    <table border="1" width="100%" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>Feature</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Movie Homepage</td>
+            <td>Displays movie information and posters.</td>
+        </tr>
+        <tr>
+            <td>Movie Navigation</td>
+            <td>Helps users navigate movie categories and sections.</td>
+        </tr>
+        <tr>
+            <td>Booking Page</td>
+            <td>Provides the booking interface, if implemented.</td>
+        </tr>
+        <tr>
+            <td>Seat Selection</td>
+            <td>Demonstrates a seat selection workflow, if implemented.</td>
+        </tr>
+        <tr>
+            <td>Confirmation Page</td>
+            <td>Displays booking information, if implemented.</td>
+        </tr>
+        <tr>
+            <td>SQL Database</td>
+            <td>Demonstrates table creation, sample data and queries.</td>
+        </tr>
+    </table>
+</section>
+
+<hr color="#444444">
+
+<!-- TECHNOLOGIES -->
+
+<section id="technology">
+    <h2>02. Technologies Used</h2>
+
+    <table border="1" width="100%" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>Technology</th>
+            <th>Purpose</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Defines the structure and content of web pages.</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Provides styling, if included in the website.</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Supports frontend interactions, if implemented.</td>
+        </tr>
+        <tr>
+            <td>SQL</td>
+            <td>Creates and manages relational database records.</td>
+        </tr>
+        <tr>
+            <td>GitHub Pages</td>
+            <td>Hosts the static website online.</td>
+        </tr>
+    </table>
+</section>
+
+<hr color="#444444">
+
+<!-- DATABASE -->
+
+<section id="database">
+    <h2>03. Database Design</h2>
+
+    <p>
+        The following entities represent a possible database structure
+        for a movie ticket booking system. The final schema should match
+        the actual SQL files submitted with the project.
+    </p>
+
+    <table border="1" width="100%" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>Entity</th>
+            <th>Purpose</th>
+        </tr>
+        <tr>
+            <td>Customers</td>
+            <td>Stores customer details.</td>
+        </tr>
+        <tr>
+            <td>Movies</td>
+            <td>Stores movie names and related information.</td>
+        </tr>
+        <tr>
+            <td>Bookings</td>
+            <td>Stores booking information.</td>
+        </tr>
+        <tr>
+            <td>Seats</td>
+            <td>Represents seats and their related information.</td>
+        </tr>
+        <tr>
+            <td>Payments</td>
+            <td>Represents payment information, if included.</td>
+        </tr>
+    </table>
+
+    <h3>Database Relationships</h3>
+
+    <ul>
+        <li>One customer may make multiple bookings.</li>
+        <li>One movie may be associated with multiple bookings.</li>
+        <li>Bookings may be linked to seat records.</li>
+        <li>Primary keys identify records uniquely.</li>
+        <li>Foreign keys establish relationships between tables.</li>
+    </ul>
+</section>
+
+<hr color="#444444">
+
+<!-- SQL -->
+
+<section id="sql">
+    <h2>04. SQL Concepts Covered</h2>
+
+    <table border="1" width="100%" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>Category</th>
+            <th>Commands and Concepts</th>
+        </tr>
+        <tr>
+            <td>DDL</td>
+            <td>CREATE, ALTER, DROP</td>
+        </tr>
+        <tr>
+            <td>DML</td>
+            <td>INSERT, UPDATE, DELETE</td>
+        </tr>
+        <tr>
+            <td>DQL</td>
+            <td>SELECT</td>
+        </tr>
+        <tr>
+            <td>DCL</td>
+            <td>GRANT, REVOKE</td>
+        </tr>
+        <tr>
+            <td>TCL</td>
+            <td>COMMIT, ROLLBACK, SAVEPOINT</td>
+        </tr>
+        <tr>
+            <td>Filtering and Sorting</td>
+            <td>WHERE, BETWEEN, IN, LIKE, ORDER BY</td>
+        </tr>
+        <tr>
+            <td>Grouping and Functions</td>
+            <td>GROUP BY, COUNT, SUM, AVG</td>
+        </tr>
+        <tr>
+            <td>Advanced Queries</td>
+            <td>Joins and nested queries</td>
+        </tr>
+        <tr>
+            <td>Transaction Management</td>
+            <td>ACID properties, concurrency and recovery</td>
+        </tr>
+    </table>
+
+    <p>
+        These concepts should be marked as completed only when they are
+        actually demonstrated in the submitted SQL work.
+    </p>
+</section>
+
+<hr color="#444444">
+
+<!-- SETUP -->
+
+<section id="installation">
+    <h2>05. How to Run the Project</h2>
+
+    <h3>A. Website Instructions</h3>
+
+    <ol>
+        <li>Open the CineBook GitHub repository.</li>
+        <li>Locate the <b>index.html</b> file.</li>
+        <li>Open the published GitHub Pages website.</li>
+        <li>Navigate through the available pages and test the links.</li>
+    </ol>
+
+    <h3>B. SQL Instructions</h3>
+
+    <ol>
+        <li>Open a compatible SQL compiler or database system.</li>
+        <li>Run the database and table creation statements first.</li>
+        <li>Execute the sample data insertion statements.</li>
+        <li>Run the SQL queries and review the results.</li>
+        <li>Test transaction examples in a compatible database.</li>
+    </ol>
+</section>
+
+<hr color="#444444">
+
+<!-- LIMITATIONS -->
+
+<section id="limitations">
+    <h2>06. Project Limitations</h2>
+
+    <ul>
+        <li>The GitHub Pages website is a static frontend unless connected to a backend service.</li>
+        <li>A live MySQL connection is not provided by GitHub Pages alone.</li>
+        <li>Persistent bookings require a backend and database integration.</li>
+        <li>Real payments and live seat availability are not assumed to be implemented.</li>
+    </ul>
+</section>
+
+<hr color="#444444">
+
+<!-- LEARNING OUTCOMES -->
+
+<section id="outcomes">
+    <h2>07. Learning Outcomes</h2>
+
+    <p>Through this project, the following learning outcomes are explored:</p>
+
+    <ul>
+        <li>Understanding relational database concepts.</li>
+        <li>Designing database tables and relationships.</li>
+        <li>Using SQL for data retrieval and modification.</li>
+        <li>Understanding transaction management and data integrity.</li>
+        <li>Connecting DBMS concepts to a practical application.</li>
+    </ul>
+</section>
+
+<hr color="#444444">
+
+<!-- ACADEMIC DETAILS -->
+
+<section id="academic">
+    <h2>08. Academic Information</h2>
+
+    <table border="1" width="100%" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>Detail</th>
+            <th>Information</th>
+        </tr>
+        <tr>
+            <td>Project Name</td>
+            <td>CineBook – Online Movie Ticket Booking System</td>
+        </tr>
+        <tr>
+            <td>Course</td>
+            <td>Bachelor of Computer Applications (BCA)</td>
+        </tr>
+        <tr>
+            <td>Semester</td>
+            <td>Semester 1</td>
+        </tr>
+        <tr>
+            <td>Subject</td>
+            <td>Database Management System (DBMS)</td>
+        </tr>
+        <tr>
+            <td>University</td>
+            <td>Silver Oak University</td>
+        </tr>
+    </table>
 </section>
 
 </main>
 
-<hr color="#333333">
+<hr color="#444444">
 
 <footer>
-    <table width="100%" cellpadding="20" bgcolor="#181818">
-        <tr>
-            <td>
-                <font size="5" color="#e50914"><b>CINEBOOK</b></font>
-                <p>Your next movie experience starts here.</p>
-                <small>BCA Semester 1 | DBMS Academic Project</small>
-            </td>
-            <td align="right">
-                <a href="#top">Back to Top ↑</a>
-                <p><a href="booking.html">Book Tickets</a></p>
-                <small>© 2026 CineBook</small>
-            </td>
-        </tr>
-    </table>
+    <center>
+        <h2><font color="#e50914">CINEBOOK</font></h2>
+        <p>Discover Movies. Choose Seats. Enjoy the Show.</p>
+        <p>
+            <a href="#top">Back to Top ↑</a>
+            &nbsp; | &nbsp;
+            <a href="index.html">Homepage</a>
+        </p>
+        <small>DBMS Academic Project | Created for educational purposes</small>
+        <p><small>© 2026 CineBook</small></p>
+    </center>
 </footer>
 
 </body>
