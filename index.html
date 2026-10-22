@@ -1,136 +1,408 @@
-<!-- MOVIE COLLECTION -->
-<a id="movies"></a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineBook - Movie Tickets & Showtimes</title>
+    <meta name="description" content="Discover movies, explore showtimes and book movie tickets with CineBook.">
+</head>
 
+<body bgcolor="#10131C" text="#FFFFFF" link="#F5C451" vlink="#F5C451">
+
+<a id="top"></a>
+
+<!-- TOP ANNOUNCEMENT -->
 <center>
-    <h2>🎬 Now Showing</h2>
-    <p>Explore movies and choose your next cinema experience.</p>
-    <p>📍 Ahmedabad, Gujarat</p>
+    <font color="#F5C451">
+        <b>🎬 CINEBOOK</b>
+    </font>
+    &nbsp; | &nbsp; Your next movie night starts here
+</center>
+
+<hr color="#F5C451">
+
+<!-- MAIN NAVIGATION MENU -->
+<table width="100%" cellpadding="14">
+    <tr>
+        <td>
+            <font size="6" color="#F5C451"><b>🎟 CineBook</b></font>
+            <br>
+            <small>Movies. Moments. Memories.</small>
+        </td>
+
+        <td align="right">
+            <a href="index.html">HOME</a>
+            &nbsp; | &nbsp;
+            <a href="#movies">MOVIES</a>
+            &nbsp; | &nbsp;
+            <a href="#cinema">CINEMAS</a>
+            &nbsp; | &nbsp;
+            <a href="#offers">OFFERS</a>
+            &nbsp; | &nbsp;
+            <a href="booking.html">MY BOOKING</a>
+        </td>
+    </tr>
+</table>
+
+<hr color="#343A49">
+
+<!-- WELCOME HERO -->
+<table width="100%" cellpadding="25">
+    <tr>
+        <td valign="middle" width="55%">
+            <p>
+                <font color="#F5C451">
+                    <b>WELCOME TO CINEBOOK</b>
+                </font>
+            </p>
+
+            <h1>
+                Your Big Screen<br>
+                Experience Starts Here.
+            </h1>
+
+            <p>
+                Discover exciting movies, explore your favourites
+                and plan your next cinema experience.
+            </p>
+
+            <p>
+                <a href="#movies">🎬 EXPLORE MOVIES</a>
+            </p>
+
+            <p>
+                <a href="booking.html">🎟 GO TO BOOKING →</a>
+            </p>
+
+            <p>📍 <b>Your City:</b> Ahmedabad, Gujarat</p>
+        </td>
+
+        <td width="45%" align="center">
+            <img
+                src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1000&q=85"
+                alt="Movie theatre and cinema seats"
+                width="100%"
+            >
+            <h3>Lights. Camera. CineBook!</h3>
+        </td>
+    </tr>
+</table>
+
+<hr color="#343A49">
+
+<!-- SEARCH AND QUICK MENU -->
+<center>
+    <h2>Find Your Perfect Movie</h2>
+    <p>Search your favourite movie and check its ticket price.</p>
+
+    <form action="#movies" method="get">
+        <input
+            type="search"
+            name="search"
+            placeholder="Search movies..."
+            size="28"
+        >
+        <button type="submit">Search</button>
+    </form>
+
+    <br>
+
+    <table width="100%" cellpadding="16">
+        <tr>
+            <td align="center">
+                <a href="#movies">
+                    <h3>🎬 Movies</h3>
+                    <small>Explore films</small>
+                </a>
+            </td>
+
+            <td align="center">
+                <a href="#cinema">
+                    <h3>🏢 Cinemas</h3>
+                    <small>Find cinema details</small>
+                </a>
+            </td>
+
+            <td align="center">
+                <a href="#offers">
+                    <h3>🎁 Offers</h3>
+                    <small>Explore movie deals</small>
+                </a>
+            </td>
+
+            <td align="center">
+                <a href="booking.html">
+                    <h3>🎟 Booking</h3>
+                    <small>Book your tickets</small>
+                </a>
+            </td>
+        </tr>
+    </table>
 </center>
 
 <hr color="#343A49">
 
+<!-- FEATURED MOVIES -->
+<a id="movies"></a>
+
+<center>
+    <p><font color="#F5C451"><b>HANDPICKED FOR YOU</b></font></p>
+    <h1>Now Showing</h1>
+    <p>Choose a movie to continue to booking.</p>
+</center>
+
+<!-- MOVIE GRID ROW 1 -->
 <table width="100%" cellpadding="14">
 <tr>
 
 <td width="25%" valign="top" align="center">
 <img src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
-alt="Interstellar poster" width="100%">
+alt="Interstellar movie poster" width="100%">
 <h3>Interstellar</h3>
 <p>Sci-Fi | Adventure</p>
-<p><b>Ticket Price: ₹250</b></p>
-<a href="booking.html?movie=Interstellar&price=250">BOOK TICKETS →</a>
+<p><b>₹250 / ticket</b></p>
+<a href="booking.html?movie=Interstellar&price=250">BOOK NOW →</a>
 </td>
 
 <td width="25%" valign="top" align="center">
 <img src="https://image.tmdb.org/t/p/w500/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg"
-alt="The Batman poster" width="100%">
+alt="The Batman movie poster" width="100%">
 <h3>The Batman</h3>
 <p>Action | Crime</p>
-<p><b>Ticket Price: ₹220</b></p>
-<a href="booking.html?movie=The%20Batman&price=220">BOOK TICKETS →</a>
+<p><b>₹220 / ticket</b></p>
+<a href="booking.html?movie=The%20Batman&price=220">BOOK NOW →</a>
 </td>
 
 <td width="25%" valign="top" align="center">
 <img src="https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg"
-alt="Avatar The Way of Water poster" width="100%">
+alt="Avatar movie poster" width="100%">
 <h3>Avatar</h3>
 <p>Sci-Fi | Fantasy</p>
-<p><b>Ticket Price: ₹280</b></p>
-<a href="booking.html?movie=Avatar&price=280">BOOK TICKETS →</a>
+<p><b>₹280 / ticket</b></p>
+<a href="booking.html?movie=Avatar&price=280">BOOK NOW →</a>
 </td>
 
 <td width="25%" valign="top" align="center">
 <img src="https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg"
-alt="Inception poster" width="100%">
+alt="Inception movie poster" width="100%">
 <h3>Inception</h3>
 <p>Sci-Fi | Thriller</p>
-<p><b>Ticket Price: ₹200</b></p>
-<a href="booking.html?movie=Inception&price=200">BOOK TICKETS →</a>
+<p><b>₹200 / ticket</b></p>
+<a href="booking.html?movie=Inception&price=200">BOOK NOW →</a>
 </td>
 
 </tr>
+</table>
+
+<!-- MOVIE GRID ROW 2 -->
+<table width="100%" cellpadding="14">
 <tr>
 
 <td width="25%" valign="top" align="center">
 <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
-alt="The Dark Knight poster" width="100%">
+alt="The Dark Knight movie poster" width="100%">
 <h3>The Dark Knight</h3>
 <p>Action | Crime</p>
-<p><b>Ticket Price: ₹230</b></p>
-<a href="booking.html?movie=The%20Dark%20Knight&price=230">BOOK TICKETS →</a>
+<p><b>₹230 / ticket</b></p>
+<a href="booking.html?movie=The%20Dark%20Knight&price=230">BOOK NOW →</a>
 </td>
 
 <td width="25%" valign="top" align="center">
 <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
-alt="Spider-Man No Way Home poster" width="100%">
+alt="Spider-Man No Way Home movie poster" width="100%">
 <h3>Spider-Man: No Way Home</h3>
-<p>Action | Superhero</p>
-<p><b>Ticket Price: ₹260</b></p>
-<a href="booking.html?movie=Spider-Man%3A%20No%20Way%20Home&price=260">BOOK TICKETS →</a>
+<p>Action | Adventure</p>
+<p><b>₹260 / ticket</b></p>
+<a href="booking.html?movie=Spider-Man%3A%20No%20Way%20Home&price=260">BOOK NOW →</a>
 </td>
 
 <td width="25%" valign="top" align="center">
 <img src="https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"
-alt="Joker poster" width="100%">
+alt="Joker movie poster" width="100%">
 <h3>Joker</h3>
 <p>Drama | Thriller</p>
-<p><b>Ticket Price: ₹210</b></p>
-<a href="booking.html?movie=Joker&price=210">BOOK TICKETS →</a>
+<p><b>₹210 / ticket</b></p>
+<a href="booking.html?movie=Joker&price=210">BOOK NOW →</a>
 </td>
 
 <td width="25%" valign="top" align="center">
 <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg"
-alt="Dune Part Two poster" width="100%">
+alt="Dune Part Two movie poster" width="100%">
 <h3>Dune: Part Two</h3>
 <p>Sci-Fi | Adventure</p>
-<p><b>Ticket Price: ₹270</b></p>
-<a href="booking.html?movie=Dune%3A%20Part%20Two&price=270">BOOK TICKETS →</a>
+<p><b>₹270 / ticket</b></p>
+<a href="booking.html?movie=Dune%3A%20Part%20Two&price=270">BOOK NOW →</a>
 </td>
 
 </tr>
+</table>
+
+<!-- MOVIE GRID ROW 3 -->
+<table width="100%" cellpadding="14">
 <tr>
 
 <td width="25%" valign="top" align="center">
 <img src="https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg"
-alt="Parasite poster" width="100%">
+alt="Parasite movie poster" width="100%">
 <h3>Parasite</h3>
 <p>Drama | Thriller</p>
-<p><b>Ticket Price: ₹190</b></p>
-<a href="booking.html?movie=Parasite&price=190">BOOK TICKETS →</a>
+<p><b>₹190 / ticket</b></p>
+<a href="booking.html?movie=Parasite&price=190">BOOK NOW →</a>
 </td>
 
 <td width="25%" valign="top" align="center">
-<img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
-alt="Oppenheimer poster" width="100%">
+<img src="https://image.tmdb.org/t/p/w500/ptpr0kGAckfQkJeJIt8st5dglvd.jpg"
+alt="Oppenheimer movie poster" width="100%">
 <h3>Oppenheimer</h3>
 <p>Drama | History</p>
-<p><b>Ticket Price: ₹250</b></p>
-<a href="booking.html?movie=Oppenheimer&price=250">BOOK TICKETS →</a>
+<p><b>₹250 / ticket</b></p>
+<a href="booking.html?movie=Oppenheimer&price=250">BOOK NOW →</a>
 </td>
 
 <td width="25%" valign="top" align="center">
-<img src="https://image.tmdb.org/t/p/w500/8YFL5QQVPy3AgrEQxNYVSgiPEbe.jpg"
-alt="Kung Fu Panda 4 poster" width="100%">
+<img src="https://image.tmdb.org/t/p/w500/1ZNOOMmILNUzVYbzG1j7GYb5bEV.jpg"
+alt="Kung Fu Panda 4 movie poster" width="100%">
 <h3>Kung Fu Panda 4</h3>
 <p>Animation | Comedy</p>
-<p><b>Ticket Price: ₹180</b></p>
-<a href="booking.html?movie=Kung%20Fu%20Panda%204&price=180">BOOK TICKETS →</a>
+<p><b>₹180 / ticket</b></p>
+<a href="booking.html?movie=Kung%20Fu%20Panda%204&price=180">BOOK NOW →</a>
 </td>
 
 <td width="25%" valign="top" align="center">
-<img src="https://image.tmdb.org/t/p/w500/2CAL2433ZeIihfX1Hb2139CX0pW.jpg"
-alt="Avengers Endgame poster" width="100%">
+<img src="https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg"
+alt="Avengers Endgame movie poster" width="100%">
 <h3>Avengers: Endgame</h3>
 <p>Action | Superhero</p>
-<p><b>Ticket Price: ₹290</b></p>
-<a href="booking.html?movie=Avengers%3A%20Endgame&price=290">BOOK TICKETS →</a>
+<p><b>₹290 / ticket</b></p>
+<a href="booking.html?movie=Avengers%3A%20Endgame&price=290">BOOK NOW →</a>
 </td>
 
 </tr>
 </table>
 
 <center>
-<p><small>All ticket prices shown are sample prices for this student project.</small></p>
+    <p><small>All listed prices are sample prices for this educational project.</small></p>
 </center>
 
 <hr color="#343A49">
+
+<!-- CINEMA SECTION -->
+<a id="cinema"></a>
+
+<center>
+    <h2>🍿 Your Cinema Experience</h2>
+    <p>Plan a movie outing in Ahmedabad.</p>
+    <p>
+        Cinema locations, showtimes and availability are not live-connected
+        in this demo.
+    </p>
+    <a href="booking.html">CONTINUE TO BOOKING →</a>
+</center>
+
+<hr color="#343A49">
+
+<!-- OFFERS SECTION -->
+<a id="offers"></a>
+
+<center>
+    <h1>🎁 Special Movie Offers</h1>
+    <p>Discover movies for your next outing.</p>
+</center>
+
+<table width="100%" cellpadding="18">
+<tr>
+    <td width="50%" align="center" valign="top">
+        <h2>🎓 Student Movie Day</h2>
+        <p>Plan a movie day with your college friends.</p>
+        <p>Check the listed sample ticket price before booking.</p>
+        <a href="#movies">EXPLORE MOVIES</a>
+    </td>
+
+    <td width="50%" align="center" valign="top">
+        <h2>👨‍👩‍👧‍👦 Family Movie Time</h2>
+        <p>Find an entertaining movie for your next family outing.</p>
+        <a href="#movies">FIND A MOVIE</a>
+    </td>
+</tr>
+</table>
+
+<hr color="#343A49">
+
+<!-- HOW IT WORKS -->
+<a id="how-it-works"></a>
+
+<center>
+    <h1>How CineBook Works</h1>
+</center>
+
+<table width="100%" cellpadding="18">
+<tr>
+    <td align="center">
+        <h3>01. Choose</h3>
+        <p>Explore movies and their sample prices.</p>
+    </td>
+
+    <td align="center">
+        <h3>02. Book</h3>
+        <p>Open the booking page and select your options.</p>
+    </td>
+
+    <td align="center">
+        <h3>03. Confirm</h3>
+        <p>Review your booking details.</p>
+    </td>
+</tr>
+</table>
+
+<hr color="#343A49">
+
+<!-- ABOUT -->
+<a id="about"></a>
+
+<center>
+    <h2>About CineBook</h2>
+    <p>
+        CineBook is a BCA student DBMS project that demonstrates
+        movie listings and a sample ticket-booking workflow.
+    </p>
+    <p>
+        This website is a project demo and does not sell real tickets.
+    </p>
+</center>
+
+<hr color="#F5C451">
+
+<!-- FOOTER -->
+<table width="100%" cellpadding="18">
+<tr>
+    <td width="40%" valign="top">
+        <font size="5" color="#F5C451"><b>🎟 CineBook</b></font>
+        <p>Movies. Moments. Memories.</p>
+        <small>BCA DBMS Student Project</small>
+    </td>
+
+    <td width="30%" valign="top">
+        <b>Explore</b>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="#movies">Movies</a></p>
+        <p><a href="#offers">Offers</a></p>
+    </td>
+
+    <td width="30%" valign="top">
+        <b>Your Booking</b>
+        <p><a href="booking.html">Book Tickets</a></p>
+        <p><a href="#how-it-works">How It Works</a></p>
+        <p><a href="#top">Back to Top ↑</a></p>
+    </td>
+</tr>
+</table>
+
+<hr color="#343A49">
+
+<center>
+    <p><small>© 2026 CineBook | Student Project</small></p>
+    <p><small>Sample ticket prices only. Not a live ticketing service.</small></p>
+</center>
+
+</body>
+</html>
